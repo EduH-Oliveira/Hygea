@@ -22,7 +22,7 @@ export const useUsers = (
     setError('');
     
     try {
-      const response = await userApi.getUsers(filters);
+      const response = await userApi.getUserAll();
       setUsers(response.data);
     } catch (error) {
       console.error('Erro ao buscar usuários:', error);

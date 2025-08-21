@@ -7,7 +7,7 @@ import UserEditScreen from "../screens/UserEditScreen";
 export type RootStackParamList = {
   UserList: undefined;
   UserCreate: undefined;
-  UserEdit: {id: string};
+  UserEdit: {id: number};
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();

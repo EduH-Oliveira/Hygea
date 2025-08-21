@@ -7,7 +7,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 type RootStackParamList = {
   UserList: undefined;
   UserCreate: undefined;
-  UserEdit: { id: string };
+  UserEdit: { id: number };
 };
 
 type Props = NativeStackScreenProps<RootStackParamList, 'UserEdit'>;
@@ -15,6 +15,8 @@ type Props = NativeStackScreenProps<RootStackParamList, 'UserEdit'>;
 const UserEditScreen: React.FC<Props> = ({ route, navigation }) => {
   const { id } = route.params;
   const [user, setUser] = useState<User | null>(null);
+
+  console.log(id);
 
   useEffect(() => {
     const fetchUser = async () => {
